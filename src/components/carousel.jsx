@@ -1,0 +1,40 @@
+import React from "react";
+import Carousel from "react-multi-carousel";
+import '../styles/tworowcarousel.css';
+
+const TwoRowCarousel = () => {
+    const responsive = {
+        desktop: {
+            breakpoint: { max: 3000, min: 1024 },
+            items: 4,
+            rows: 2,
+          },
+          tablet: {
+            breakpoint: { max: 1024, min: 464 },
+            items: 2,
+            rows: 2,
+          },
+          mobile: {
+            breakpoint: { max: 464, min: 0 },
+            items: 1,
+            rows: 2,
+          },
+    };
+
+    return(
+        <Carousel  
+        responsive={responsive}
+        >
+            <div className="carousel-item">Item1</div>
+            <div className="carousel-item2">Item1</div>
+            <div className="carousel-item">Item1</div>
+            <div className="carousel-item2">Item1</div>
+            <br/>
+            <div className="carousel-item">Item1</div>
+            <div className="carousel-item2">Item1</div>
+            <div className="carousel-item">Item1</div>
+        </Carousel>
+    )
+};
+
+export default TwoRowCarousel;

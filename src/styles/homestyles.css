@@ -1,0 +1,25 @@
+body {
+    margin: 0;
+}
+
+.herohome {
+    background-image: url(/src/img/fondo.png);
+    width: 100%;
+    height: 90vh;
+    position: relative;
+    z-index: 0;
+    /* background-size: auto;
+    background-position: center;*/
+    color: #fff;
+}
+
+.heroText {
+    font-size: 18px;
+    word-spacing: 8px;
+    padding-top: 10%;
+    padding-left: 60%;
+}
+
+.homeboldtext {
+    
+}

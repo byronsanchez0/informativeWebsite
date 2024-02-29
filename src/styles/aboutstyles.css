@@ -1,0 +1,158 @@
+body {
+    margin: 0;
+}
+
+.aboutgrid-container {
+    display: grid;
+    /*grid-template-colums: repeat(3, 1fr);*/
+    grid-template-columns: repeat(2, 1fr);
+    /*height: 90vh;*/
+    flex: 1;
+    /* Allow main content to grow to fill remaining space */
+    overflow-y: auto;
+    /* Enable vertical scrolling if content overflows */
+    height: 100vh;
+    /* Example maximum height */
+}
+
+.aboutgrid-item1 {
+    background-image: url(/src/img/fono-nosotros.png);
+    background-size: cover;
+    background-position: center;
+    background-color: #f0f0f0;
+    display: grid;
+    /*grid-template-columns: repeat(4, 1fr); */
+    /* 4 columns */
+    /*grid-template-rows: repeat(3, 150px);*/
+    /* 3 rows */
+    /*gap: 10px;
+    /* Gap between grid items */
+    /* padding: 3%;
+    border: 0%; */
+    /* height: 7z0%;*/
+    /*text-align: center; */
+    /*  background-size: cover;
+    background-position: center;
+    background-color: #00aeff00;
+    border: 0%; */
+    padding-top: 12%;
+    align-content: start;
+    justify-content: center;
+    text-align: center;
+}
+
+.aboutgrid-1 {
+    /* background-image: url(/src/img/fono-nosotros.png);
+    background-size: cover;
+    background-position: center;
+    background-color: #f0f0f0; */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* 4 columns */
+    grid-template-rows: repeat(3, 100px);
+    /* 3 rows */
+    gap: 1px;
+    /* Gap between grid items */
+    padding: 1%;
+    border: 0%;
+    /* height: 7z0%;*/
+    text-align: center;
+}
+
+.gridtitle {
+    font-size: 30px;
+    font-weight: bold;
+    background-color: rgba(185, 37, 37, 0);
+    /*position: absolute;*/
+    width: 46vw;
+    margin-top: 1%;
+    margin-bottom: 5%;
+}
+
+.gridtitle h1 {
+    color: white;
+}
+
+.gridtitle .secondtitlegrid {
+    color: rgb(186, 255, 24);
+}
+
+.grid-item1-item {
+    background-color: rgba(0, 255, 255, 0);
+    align-items: center;
+}
+
+.aboutgrid-item2 {
+    background-size: cover;
+    background-position: center;
+    background-color: #00aeff;
+    border: 0%;
+    padding-top: 10%;
+    justify-content: center;
+    text-align: center;
+}
+
+.aboutgrid-2 {
+    background-color: #00aeff;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* 4 columns */
+    grid-template-rows: repeat(3, 150px);
+    /* 3 rows */
+    gap: 1px;
+    /* Gap between grid items */
+    padding: 1%;
+    border: 0%;
+    /* height: 7z0%;*/
+    justify-self: center;
+    text-align: center;
+}
+
+.grid-item2-item {
+    background-color: rgba(255, 238, 0, 0);
+    align-items: center;
+    justify-self: center;
+    padding-top: 10%;
+    margin-top: 10%;
+}
+
+.grid-item2-item p {
+    color: white;
+    padding-top: 5%;
+}
+
+.h1-item2 {
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+}
+
+.p-item2 {
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(186, 255, 24)
+}
+
+
+
+
+@media screen and (max-width: 768px) {
+    .aboutgrid-container {
+        grid-template-columns: repeat(1, 1fr);
+        /* Two columns for smaller screens */
+
+    }
+
+    .aboutgrid-item {
+        background-image: url(/src/img/wllpaper.jpg);
+        background-size: cover;
+        background-position: center;
+        background-color: #f0f0f0;
+        padding: 39%;
+        border: 0%;
+        /* height: 7z0%;*/
+        text-align: center;
+    }
+
+
+}

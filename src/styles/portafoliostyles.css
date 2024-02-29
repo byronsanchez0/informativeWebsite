@@ -1,0 +1,106 @@
+.grid-container {
+    display: grid;
+    /*grid-template-colums: repeat(3, 1fr);*/
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    height: 100vh;
+    margin: 30px 3%;
+}
+    
+.grid-item1 {
+    background-image: url(/src/img/PRODUCCION.png);
+    background-size: cover;
+    background-position: center;
+    /* height: 7z0%;*/
+    display: flex;
+    text-align: center;
+    flex: 1; /* Allow item to grow to fill available space */
+    min-height: 0; /* Ensure item can shrink if needed */
+    align-content: center;
+    width: 30vw;
+    height: 90vh;
+}
+
+.colum-div-1 {
+    background-color: rgb(225, 255, 54);
+    margin-top: auto;
+    width: 30vw;
+    height: 20vh;
+    padding-top: 15px;
+}
+
+.grid-item2 {
+    background-image: url(/src/img/BTLEVENTOS.png);
+    background-size: 50%;
+    background-position: center;
+    /* height: 7z0%;*/
+    display: flex;
+    text-align: center;
+    flex: 1; /* Allow item to grow to fill available space */
+    min-height: 0; /* Ensure item can shrink if needed */
+    align-content: center;
+    width: 30vw;
+    height: 90vh;
+}
+
+.colum-div-2 {
+    background-color: rgb(43, 170, 255);
+    margin-top: auto;
+    width: 30vw;
+    height: 20vh;
+    padding-top: 15px;
+}
+
+.grid-item3 {
+    background-image: url(/src/img/AGENCIA.png);
+    background-size: 50%;
+    background-position: center;
+    /* height: 7z0%;*/
+    display: flex;
+    text-align: center;
+    flex: 1; /* Allow item to grow to fill available space */
+    min-height: 0; /* Ensure item can shrink if needed */
+    align-content: center;
+    width: 30vw;
+    height: 90vh;
+}
+
+.colum-div-3 {
+    background-color: rgb(255, 175, 27);
+    margin-top: auto;
+    width: 30vw;
+    height: 20vh;
+    padding-top: 15px;
+}
+
+.portfolio-h1 {
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    padding: 1%;
+}
+
+.portfolio-text {
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    padding: 1%;
+    justify-self: center;
+}
+
+.carousel {
+    background-color: rgba(16, 27, 5, 0);
+}
+
+.complete-carousel {
+    width: 90wh;
+    position: absolute;
+}
+
+
+
+@media screen and (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: repeat(2, minmax(250px, 1fr));
+        /* Two columns for smaller screens */
+    }
+}
