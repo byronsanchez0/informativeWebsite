@@ -23,30 +23,33 @@ import img19 from '../img/carousel/20helada.jpg';
 import img20 from '../img/carousel/21gasofa.jpeg';
 import img21 from '../img/carousel/22winwin.jpeg';
 import img22 from '../img/carousel/23laconstancia.jpeg';
-
+import { useHistory } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const TwoRowCarousel = () => {
 
   const [selectedImage, setSelectedImage] = useState(null);
 
-  const items = [
-    { type: 'image', src: tarjeta },
-    { type: 'video', src: videotigo },
-    { type: 'image', src: tarjeta },
-    { type: 'image', src: ricolino },
-    { type: 'image', src: img2 },
-    { type: 'image', src: img4 },
-    { type: 'image', src: img5 },
-    { type: 'image', src: img7 },
-    { type: 'image', src: img9 },
-    { type: 'image', src: img10 },
-    { type: 'image', src: img11 },
-    { type: 'image', src: img12 },
-    { type: 'image', src: img13 },
-    { type: 'image', src: img14 },
-    { type: 'image', src: img15 },
+  const [items, setItems] = useState(
+    [
+      { id: 1, title: "Papeleria Corporativa", description: "Diseño y producción de papelería corporativa. Que tu marca impacte con detalles en barniz registrado.", type: 'image', src: tarjeta },
+      { id: 2, title: "REEL EVENTO TIGOOOL", description: "Video resumen de evento Tigoool.", type: 'video', src: videotigo },
+      { id: 3, title: "Evento x", description: "se hizo evento x", type: 'image', src: img2 },
+      { id: 4, title: "Evento Ricolino", description: "Evento Ricolino ", type: 'image', src: ricolino },
+      { id: 5, title: "Evento x", description: "Se hizo evento x", type: 'image', src: img2 },
+      { id: 6, title: "Agenda Corporativa, Bimbo El Salvador", description: "Diseño y producción de agendas corporativas personalizadas para planeación comercial.", type: 'image', src: img4 },
+      { id: 7, title: "Evento x", description: "Se hizo Evento x", type: 'image', src: img5 },
+      { id: 8, title: "Trabajo profesional", description: "Realizamos un trabajo integral", type: 'image', src: img7 },
+      { id: 9, title: "Trabajo en equipo", description: "Planeacion con el mejor equipo", type: 'image', src: img9 },
+      { id: 10, title: "Kit Promocional, Cubo Pago.", description: "Se hizo Evento x", type: 'image', src: img10 },
+      { id: 11, title: "Rótulo con luz troquelado.", description: "Diseño y producción de kit promocional para comercios afiliados al nuevo sistema de pago Cubo.", type: 'image', src: img11 },
+      { id: 12, title: "Evento x", description: "Producción de rótulo en acrílico con detalles de luces para papas McDonalds.", type: 'image', src: img12 },
+      { id: 13, title: "Evento x", description: "Se hizo Evento x", type: 'image', src: img13 },
+      { id: 14, title: "Evento x", description: "Se hizo Evento x", type: 'image', src: img14 },
+      { id: 16, title: "Evento de Año Nuevo, Teleperformance.", description: "Diseño y montaje de evento para fiesta corporativa, Teleperformance El Salvador.", type: 'image', src: img15 },
 
-  ]
+    ]
+  );
 
   const responsive = {
     desktop: {
@@ -69,7 +72,7 @@ const TwoRowCarousel = () => {
   const handleClickImage = (index) => {
     setSelectedImage(items[index]);
     console.log('Clicked', index);
-    
+
   }
 
   const handleCloseImage = () => {
@@ -87,7 +90,7 @@ const TwoRowCarousel = () => {
         <p>aaaaa</p>
         {/* {items.map((item, index) => (
           <div key={index} style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', padding: 0 }} >
-            {item?.type === 'image' && 
+            {item?.type === ' image' && 
             <img src={item.src} alt="img1dolofin" 
             width="600px" height="400px" 
             onClick={() => handleClickImage(index)} />}
@@ -99,14 +102,17 @@ const TwoRowCarousel = () => {
         {items.map((item, index) => (
           <div key={index} style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', padding: 0 }}>
             {item?.type === 'image' && (
-              <img
-                key={index}
-                src={item.src}
-                alt="img1dolofin"
-                width="600px"
-                height="400px"
-                onClick={() => handleClickImage(index)}
-              />
+              <Link to={'./item/${item.id}'}>
+                <img
+                  key={index}
+                  src={item.src}
+                  alt="img1dolofin"
+                  width="600px"
+                  height="400px"
+                  onClick={() => navigation.navigate('ItemDetails', { item })}
+                />
+              </Link>
+
             )}
             {item?.type === 'video' && (
               <video
@@ -117,15 +123,15 @@ const TwoRowCarousel = () => {
                 width="600px"
                 height="400px"
                 className="videocarrosel"
-                onClick={() => handleClickImage(index)}
+                onClick={() => handleClickImage(item)}
               />
             )}
           </div>
         ))}
-        
+
       </Carousel>
 
-      {selectedImage && (
+      {/* {selectedImage && (
         <div className="modal">
           <div className="modal-content">
             <span className="close" onClick={handleCloseImage}>&times;</span>
@@ -140,7 +146,26 @@ const TwoRowCarousel = () => {
             )}
           </div>
         </div>
-      )}
+      )} */}
+      {/* <div className="image-grid">
+        {items.map((item, index) => (
+          <div key={index} className="image-container">
+            <img src={item.src} alt={item.description} onClick={() => handleClickImage(item)} />
+            <p>{item.description}</p>
+          </div>
+        ))}
+      </div>
+      {
+        selectedImage && (
+          <div className="modal">
+          <div className="modal-content">
+            <span className="close" onClick={handleCloseImage}>&times;</span>
+            <img src={selectedImage.src} alt={selectedImage.description} />
+            <p>{selectedImage.description}</p>
+          </div>
+        </div>
+        )
+      } */}
     </div>
 
   )
