@@ -128,13 +128,13 @@ const TwoRowCarousel = () => {
             {item?.type === 'video' && (
               <video
                 src={item.src}
-                autoPlay
-                loop
+                //autoPlay
+                //loop
                 muted
                 width="600px"
                 height="400px"
                 className="videocarrosel"
-              
+                onClick={() => handleClick(item)}
               />
             )}
           </div>

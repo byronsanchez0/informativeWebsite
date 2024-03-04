@@ -29,6 +29,8 @@ const ItemDetails = ({ onClose }) => {
             <div className="firstdiv">
                 {selectedItem && (
                     <img src={selectedItem.src} alt="imgsrc" />
+                    ||
+                    <video src={selectedItem.src}></video>
                 )
                 }
 

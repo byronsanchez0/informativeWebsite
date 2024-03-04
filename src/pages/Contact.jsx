@@ -23,6 +23,8 @@ function Contact() {
         if (formData.name == '') this.setState({
             inputClass: "invalid"
         });
+        //send form info logic here
+        
         console.log(formData);
         // Reset the form after submission
         setFormData({
