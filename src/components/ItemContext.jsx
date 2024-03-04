@@ -1,18 +1,19 @@
-/* import React, { createContext, useState, useEffect } from "react";
+ import React, { createContext, useState, useEffect } from "react";
 
 
-export const ItemContext = createContext();
+const MyContext = createContext();
 
-const ItemProvider = ({children}) => {
+export const MyProvider = ({ children }) => {
+    const [selectedItem, setSelectedItem] = useState(null);
 
-    const [items, setItems] = useState([]);
-
-    useEffect(() => {
-        const fetchItems = async () => {
-            const response = await
-        }
-    })
-    return <ItemContext.Provider>{children}</ItemContext.Provider>
+    const handleSelectedItem = (item) => {
+        setSelectedItem(item);
+    };
+    return(
+        <MyContext.Provider value= {{selectedItem, handleSelectedItem}}>
+            {children}
+        </MyContext.Provider>
+    );
 };
 
-export default ProductContext; */
+export default MyContext; 

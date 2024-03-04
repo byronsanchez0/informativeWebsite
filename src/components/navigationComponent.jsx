@@ -15,7 +15,7 @@ function navigationComponent() {
         <Route path="/About" exact Component={About} />
         <Route path="/Portafolio" exact Component={Portafolio} />
         <Route path="/Contact" exact Component={Contact} />
-        <Route path="/Portafolio/Details" exact Component={ItemDetails}/>
+        <Route path="/Portafolio/item/:id" exact Component={ItemDetails}/>
       </Routes>
 
     </Router>

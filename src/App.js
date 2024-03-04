@@ -4,6 +4,7 @@ import Navbar from './components/navbar';
 import Footer from './components/footer';
 import NavigationComponent from './components/navigationComponent';
 import insta from './img/instalogo.png';
+import { MyProvider } from './components/ItemContext';
 
 
 function App() {
@@ -13,7 +14,10 @@ function App() {
         <header className="App-header">
           <Navbar />
         </header>
+        <MyProvider>
         <NavigationComponent />
+        </MyProvider>
+        
       </div>
       <Footer />
     </body>

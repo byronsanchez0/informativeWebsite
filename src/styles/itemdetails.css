@@ -1,0 +1,50 @@
+.itemstyle {
+    align-self: center;
+    width: 170vh;
+    height: 100vh;
+    background-color: rgb(30, 107, 107);
+    display: grid;
+    /*grid-template-colums: repeat(3, 1fr);*/
+    grid-template-columns: repeat(2, 1fr);
+    /*height: 90vh;*/
+    /* Allow main content to grow to fill remaining space */
+    overflow-y: auto;
+    /* Enable vertical scrolling if content overflows */
+    /* Example maximum height */
+}
+
+.itemstyle p {
+    font-size: 50px;
+    color: aqua;
+}
+
+.closeitem {
+    background-color: rgba(197, 80, 80, 0.884);
+    margin-left: 90%;
+    font-size: 90px;
+    width: 70px;
+    height: 20px;
+}
+
+.firstdiv {
+    background-color: brown;
+    align-content: flex-end;
+}
+
+.firstdiv img {
+    width: 90vh;
+}
+
+.seconddiv {
+    background-color: yellow;
+    padding: 5%;
+}
+
+.closeitemstyle {
+    position: fixed;
+    margin-left: 90%;
+}
+
+.divitem {
+    justify-self: center;
+}

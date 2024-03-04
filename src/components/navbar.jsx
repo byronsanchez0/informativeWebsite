@@ -27,7 +27,7 @@ function Navbar() {
 
     return (
         <nav className="nav">
-            <a href="/" className="nav__link" target="_blank">
+            <a href="/" className="nav__link">
                 <img src={as} alt="asesores image" width={40} height={40}></img>
             </a>
             <ul className={active}>

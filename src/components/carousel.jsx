@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import Carousel from "react-multi-carousel";
 import '../styles/tworowcarousel.css';
 import tarjeta from '../img/carousel/19tarjeta.png';
@@ -25,8 +25,13 @@ import img21 from '../img/carousel/22winwin.jpeg';
 import img22 from '../img/carousel/23laconstancia.jpeg';
 import { useHistory } from 'react-router-dom';
 import { Link } from 'react-router-dom';
+import MyContext from './ItemContext';
+import ItemDetails from "./ItemDetails";
 
 const TwoRowCarousel = () => {
+
+  const [showModal, setShowModal] = useState(false);
+  const { handleSelectedItem } = useContext(MyContext);
 
   const [selectedImage, setSelectedImage] = useState(null);
 
@@ -69,14 +74,22 @@ const TwoRowCarousel = () => {
     },
   };
 
-  const handleClickImage = (index) => {
+  /* const handleClickImage = (index) => {
     setSelectedImage(items[index]);
     console.log('Clicked', index);
 
+  } */
+
+  const handleClick = (item) => {
+    handleSelectedItem(item);
+    setShowModal(true);
+    console.log('eto furula');
   }
 
-  const handleCloseImage = () => {
-    setSelectedImage(null);
+
+  const handleCloseModal = () => {
+    setShowModal(false);
+    console.log('eto NO furula');
   }
 
   return (
@@ -86,8 +99,6 @@ const TwoRowCarousel = () => {
         infinite={true}
         slidesToSlide={3}
       >
-        <div className="modal"></div>
-        <p>aaaaa</p>
         {/* {items.map((item, index) => (
           <div key={index} style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', padding: 0 }} >
             {item?.type === ' image' && 
@@ -109,7 +120,7 @@ const TwoRowCarousel = () => {
                   alt="img1dolofin"
                   width="600px"
                   height="400px"
-                  onClick={() => navigation.navigate('ItemDetails', { item })}
+                  onClick={() => handleClick(item)}
                 />
               </Link>
 
@@ -123,13 +134,15 @@ const TwoRowCarousel = () => {
                 width="600px"
                 height="400px"
                 className="videocarrosel"
-                onClick={() => handleClickImage(item)}
+              
               />
             )}
           </div>
         ))}
 
       </Carousel>
+      
+      {showModal && <ItemDetails onClose={showModal}/>}
 
       {/* {selectedImage && (
         <div className="modal">
