@@ -27,6 +27,9 @@ import { useHistory } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import MyContext from './ItemContext';
 import ItemDetails from "./ItemDetails";
+import Slider from "react-slick";
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
 const TwoRowCarousel = () => {
 
@@ -59,7 +62,7 @@ const TwoRowCarousel = () => {
   const responsive = {
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
-      items: 3,
+      items: 4,
       rows: 2,
     },
     tablet: {
@@ -92,26 +95,46 @@ const TwoRowCarousel = () => {
     console.log('eto NO furula');
   }
 
+  /* const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slideToShow: 4,
+    slidesToScroll: 1,
+    rows: 2,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+          rows: 2,
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          rows: 2,
+        }
+      }
+    ]
+
+  } */
+
   return (
-    <div>
+
+
+
+
+    // *********** CAROUSEL ACAAAAAAAAA *******
+    < div >
       <Carousel
         responsive={responsive}
         infinite={true}
-        slidesToSlide={3}
+        slidesToSlide={4}
       >
-        {/* {items.map((item, index) => (
-          <div key={index} style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', padding: 0 }} >
-            {item?.type === ' image' && 
-            <img src={item.src} alt="img1dolofin" 
-            width="600px" height="400px" 
-            onClick={() => handleClickImage(index)} />}
-            {item?.type === 'video' && (
-              <video src={item.src} autoPlay loop muted width="600px" height="400px" className="videocarrosel" onClick={() => handleClickImage(index)} />
-            )}
-          </div>
-        ))} */}
         {items.map((item, index) => (
-          <div key={index} style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', padding: 0 }}>
+          <div key={index} style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', padding: 0 }} >
             {item?.type === 'image' && (
               <Link to={'./item/${item.id}'}>
                 <img
@@ -121,65 +144,36 @@ const TwoRowCarousel = () => {
                   width="600px"
                   height="400px"
                   onClick={() => handleClick(item)}
+                  className="carouselImage"
                 />
               </Link>
 
             )}
             {item?.type === 'video' && (
-              <video
-                src={item.src}
-                //autoPlay
-                //loop
-                muted
-                width="600px"
-                height="400px"
-                className="videocarrosel"
-                onClick={() => handleClick(item)}
-              />
+              <Link to={'./item/${item.id}'}>
+                <div onClick={() => handleClick(item)}>
+                  <video
+                    src={item.src}
+                    autoPlay
+                    loop
+                    muted
+                    width="600px"
+                    height="400px"
+                    className="videocarrosel"
+                  />
+                </div>
+              </Link>
+
+
             )}
           </div>
         ))}
 
       </Carousel>
-      
-      {showModal && <ItemDetails onClose={showModal}/>}
 
-      {/* {selectedImage && (
-        <div className="modal">
-          <div className="modal-content">
-            <span className="close" onClick={handleCloseImage}>&times;</span>
-            {selectedImage.type === 'image' && (
-              <img src={selectedImage.src} alt="Selected Image" />
-            )}
-            {selectedImage.type === 'video' && (
-              <video controls width="600px" height="400px">
-                <source src={selectedImage.src} type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
-            )}
-          </div>
-        </div>
-      )} */}
-      {/* <div className="image-grid">
-        {items.map((item, index) => (
-          <div key={index} className="image-container">
-            <img src={item.src} alt={item.description} onClick={() => handleClickImage(item)} />
-            <p>{item.description}</p>
-          </div>
-        ))}
-      </div>
-      {
-        selectedImage && (
-          <div className="modal">
-          <div className="modal-content">
-            <span className="close" onClick={handleCloseImage}>&times;</span>
-            <img src={selectedImage.src} alt={selectedImage.description} />
-            <p>{selectedImage.description}</p>
-          </div>
-        </div>
-        )
-      } */}
-    </div>
+      {showModal && <ItemDetails onClose={showModal} />}
+
+    </div >
 
   )
 };

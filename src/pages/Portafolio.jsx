@@ -9,19 +9,19 @@ function Portafolio() {
                 <div class="grid-item1">
                     <div className='colum-div-1'>
                         <h1 className='portfolio-h1'>NUESTROS SOCIOS</h1>
-                        <p className='portfolio-text'>Impresión Offset, Impresión Digital, Impresión UV, <br/> Plotter, Corte Láser, Madera, Acrílico, <br /> Estructuras, Promocionales.</p>
+                        <p className='portfolio-text'>Impresión Offset, Impresión Digital, Impresión UV, Plotter, Corte Láser, Madera, Acrílico, Estructuras, Promocionales.</p>
                     </div>
                 </div>
                 <div class="grid-item2">
                     <div className='colum-div-2'>
                         <h1 className='portfolio-h1'>CREAMOS EXPERIENCIAS</h1>
-                        <p className='portfolio-text'>Activaciones de Marca, Lanzamientos, Perifoneo, <br /> Sampling, PhotoBooth, VideoBooth, Audio y Sonido, <br /> Cobertura, Pantallas, Eventos.</p>
+                        <p className='portfolio-text'>Activaciones de Marca, Lanzamientos, Perifoneo, Sampling, PhotoBooth, VideoBooth, Audio y Sonido, Cobertura, Pantallas, Eventos.</p>
                     </div>
                 </div>
                 <div class="grid-item3">
                     <div className='colum-div-3'>
                         <h1 className='portfolio-h1'>SOMOS CREATIVOS</h1>
-                        <p className='portfolio-text'>Estrategias, Branding, Social Media, Trademarketing,<br /> Diseño Editorial, Diseño Digital, <br /> Diseño Industrial, Diseño Publicitario. </p>
+                        <p className='portfolio-text'>Estrategias, Branding, Social Media, Trademarketing, Diseño Editorial, Diseño Digital,  Diseño Industrial, Diseño Publicitario. </p>
                     </div>
                 </div>
                 

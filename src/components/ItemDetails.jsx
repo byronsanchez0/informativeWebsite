@@ -22,34 +22,50 @@ const ItemDetails = ({ onClose }) => {
     return (
 
         <div className="itemstyle">
-            <div></div>
-            <a href="/Portafolio" className="closeitem">
-                x
-            </a>
+
+
+
             <div className="firstdiv">
-                {selectedItem && (
-                    <img src={selectedItem.src} alt="imgsrc" />
-                    ||
-                    <video src={selectedItem.src}></video>
+                <a href="/Portafolio" className="closeitem">
+                    x
+                </a>
+                {selectedItem?.type === 'image' && (
+                    <img src={selectedItem.src} alt="imgsrc"
+                        width="1080px"
+                        height="720px" />
+
+
                 )
                 }
+                {
+                    selectedItem?.type === 'video' && (
+                        <video src={selectedItem.src} alt="imgsrc"
+                            autoPlay
+                            controls
+                            loop
+                            muted
+                            width="1080px"
+                            height="720px"
+                            className="videodiv" />
 
-            </div>
+                    )
+                }
 
-            <div className="seconddiv">
-                <h2>Itemaaaaaa: </h2>
                 {
                     selectedItem && (
                         <div className="divitem">
-                            <p>{selectedItem ? selectedItem.title : 'no item selected'} </p>
+                            <h2>{selectedItem ? selectedItem.title : 'no item selected'} </h2>
                             <p>{selectedItem ? selectedItem.description : 'no item selected'} </p>
                         </div>
                     )
                 }
             </div>
-            <div >
 
-            </div>
+            {/* <div className="seconddiv">
+
+                </div> */}
+
+
         </div>
     );
 }
