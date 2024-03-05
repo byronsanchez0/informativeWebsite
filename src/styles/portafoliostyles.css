@@ -1,16 +1,25 @@
 .grid-container {
     display: grid;
+    background-color: rgba(240, 248, 255, 0);
     /*grid-template-colums: repeat(3, 1fr);*/
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
+    grid-template-columns: repeat(3, 550px);
     height: 100vh;
     margin: 10px 1%;
     margin-bottom: -60px;
+    justify-content: center; /* Center the items horizontally */
+    align-items: center; /* Center the items vertically */
+    gap: 1px;
 }
-    
+
+.griditems{
+    background-color: rgba(238, 130, 238, 0);
+    width: 28vw;
+    height: 80vh;
+}
+
 .grid-item1 {
     background-image: url(/src/img/PRODUCCION.png);
-    background-size: cover;
+    /* background-size: cover; */
     background-position: center;
     /* height: 7z0%;*/
     display: flex;
@@ -18,21 +27,22 @@
     flex: 1; /* Allow item to grow to fill available space */
     min-height: 0; /* Ensure item can shrink if needed */
     align-content: center;
-    width: 30vw;
-    height: 90vh;
+    height: 616px;
+    width: 525px;
+    
 }
 
 .colum-div-1 {
     background-color: rgb(225, 255, 54);
     margin-top: auto;
-    width: 30vw;
-    height: 20vh;
+    width: 28vw;
+    height: 16vh;
     padding-top: 15px;
-}
+} 
 
 .grid-item2 {
     background-image: url(/src/img/BTLEVENTOS.png);
-    background-size: 50%;
+    /* background-size: cover; */
     background-position: center;
     /* height: 7z0%;*/
     display: flex;
@@ -40,21 +50,21 @@
     flex: 1; /* Allow item to grow to fill available space */
     min-height: 0; /* Ensure item can shrink if needed */
     align-content: center;
-    width: 30vw;
-    height: 90vh;
+    height: 616px;
+    width: 525px;
 }
 
 .colum-div-2 {
     background-color: rgb(43, 170, 255);
     margin-top: auto;
-    width: 30vw;
-    height: 20vh;
+    width: 28vw;
+    height: 16vh;
     padding-top: 15px;
 }
 
 .grid-item3 {
     background-image: url(/src/img/AGENCIA.png);
-    background-size: 50%;
+    /* background-size: cover; */
     background-position: center;
     /* height: 7z0%;*/
     display: flex;
@@ -62,15 +72,15 @@
     flex: 1; /* Allow item to grow to fill available space */
     min-height: 0; /* Ensure item can shrink if needed */
     align-content: center;
-    width: 30vw;
-    height: 90vh;
+    height: 616px;
+    width: 525px;
 }
 
 .colum-div-3 {
     background-color: rgb(255, 175, 27);
     margin-top: auto;
-    width: 30vw;
-    height: 20vh;
+    width: 28vw;
+    height: 16vh;
     padding-top: 15px;
 }
 
