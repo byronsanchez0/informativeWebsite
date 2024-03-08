@@ -13,8 +13,8 @@
 
 .griditems{
     background-color: rgba(238, 130, 238, 0);
-    width: 28vw;
-    height: 80vh;
+    height: 816px;
+    width: 525px;
 }
 
 .grid-item1 {
@@ -35,9 +35,12 @@
 .colum-div-1 {
     background-color: rgb(225, 255, 54);
     margin-top: auto;
-    width: 28vw;
+    width: 525px;
     height: 16vh;
-    padding-top: 15px;
+    padding: 15px;
+    position: inherit;
+    text-align: center;
+    
 } 
 
 .grid-item2 {
@@ -57,9 +60,10 @@
 .colum-div-2 {
     background-color: rgb(43, 170, 255);
     margin-top: auto;
-    width: 28vw;
+    width: 525px;
     height: 16vh;
-    padding-top: 15px;
+    padding: 15px;
+    text-align: center;
 }
 
 .grid-item3 {
@@ -79,9 +83,10 @@
 .colum-div-3 {
     background-color: rgb(255, 175, 27);
     margin-top: auto;
-    width: 28vw;
+    width: 525px;
     height: 16vh;
-    padding-top: 15px;
+    padding: 15px;
+    text-align: center;
 }
 
 .portfolio-h1 {

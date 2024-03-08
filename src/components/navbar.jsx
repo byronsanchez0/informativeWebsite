@@ -1,11 +1,13 @@
 import React, { useState } from "react";
+import { NavLink } from 'react-router-dom';
 import "../styles/homenavbar.css";
 import insta from '../img/instalogo.png';
 import fb from '../img/fblogo.png';
 import as from '../img/logo.png';
+import AboutScreen from '../pages/About';
 //import {Link, useMatch, useResolvedPath} from "react-router-dom";
 
-function Navbar() {
+function Navbar({screen}) {
 
     const [active, setActive] = useState("nav__menu");
     const [icon, setIcon] = useState("nav__toggler");
@@ -25,29 +27,72 @@ function Navbar() {
         } else setIcon("nav__toggler");
     };
 
+    var pageName = window.location.pathname;
+
+    /*  const renderContent = () => {
+         switch (activePage)
+     } */
+    //ESTOOOOOOO ES LA FORMA QUE QUEIRO PROBAR
+    const [condition, setCondition] = useState(false);
+
+  // OTRA OPCIONNNNNNNNNNNN
+
+     const getScreenName = () => {
+    switch (screen) {
+      case 'home':
+        return 'Home';
+      case 'about':
+        return 'About';
+      case 'services':
+        return 'Services';
+      case 'contact':
+        return 'Contact';
+      default:
+        return 'Unknown Screen';
+    }
+  };
+
+
+    // ESTOOOOOOOOOOO ES OTRA FORMA
+     
+    const [activePage, setActivePage] = useState({getScreenName});
+
+
+
+    const handleItemClick = (pageName) => {
+
+        setActivePage(pageName);
+
+    };
+
     return (
         <nav className="nav">
-            <a href="/" className="nav__link">
+            <a href="/" className="nav__link" >
                 <img src={as} alt="asesores image" width={40} height={40}></img>
             </a>
             <ul className={active}>
-                <li className="nav__item">
-                    <a href={"/"} className="nav__link">
+                <li className={activePage === 'Home' ? 'acctive' : ''}>
+
+                <a href="./" onClick={() => handleItemClick('Home')} >
                         INICIO
                     </a>
+
+
+
+
                 </li>
-                <li className="nav__item">
-                    <a href={"/About"} className="nav__link">
+                <li className={activePage == 'About' ? 'acctive' : ''}>
+                    <a href="./About" onClick={() => handleItemClick('About')} >
                         NOSOTROS
                     </a>
                 </li>
-                <li className="nav__item">
-                    <a href="/Portafolio" className="nav__link">
+                <li className={activePage === 'Portafolio' ? 'acctive' : ''}>
+                    <a href="./Portafolio" onClick={() => handleItemClick('Portafolio')}>
                         PORTAFOLIO
                     </a>
                 </li>
-                <li className="nav__item">
-                    <a href="/Contact" className="nav__link">
+                <li className={activePage === 'Contact' ? 'acctive' : ''}>
+                    <a href="./Contact" onClick={() => handleItemClick('Contact')}>
                         CONTACTO
                     </a>
                 </li>
@@ -59,7 +104,7 @@ function Navbar() {
                 <li className="nav__item">
                     <a href="https://www.instagram.com/grupoasesores.sv/" className="nav__link" target="_blank">
                         <img src={insta} alt="insta image" width={40} height={40}></img>
-                        
+
                     </a>
                 </li>
             </ul>

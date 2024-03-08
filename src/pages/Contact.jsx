@@ -1,7 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import "../styles/contactstyles.css";
+import emailjs from '@emailjs/browser';
 
 function Contact() {
+    const form = useRef();
+
+
     const [formData, setFormData] = useState({
         name: '',
         email: '',
@@ -19,10 +23,24 @@ function Contact() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        const form = e.target;
-        if (formData.name == '') this.setState({
+
+        emailjs
+            .sendForm('service_lkco6o7', 'template_vgb30do', form.current, {
+                publicKey: 'jzVHJ8JChg0wsd_VK',
+            })
+            .then(
+                () => {
+                    console.log('SUCCESS!');
+                    console.log('message send!');
+                },
+                (error) => {
+                    console.log('FAILED...', error.text);
+                },
+            );
+        /* const form = e.target; */
+       /*  if (formData.name == '') this.setState({
             inputClass: "invalid"
-        });
+        }); */
         //send form info logic here
 
         console.log(formData);
@@ -41,7 +59,8 @@ function Contact() {
     return (
         <section className="form-container">
             <div></div>
-            <form className="form-style" onSubmit={handleSubmit}>
+
+            <form className="form-style" onSubmit={handleSubmit} ref={form}>
                 <h2 className="formTitle">¡COTIZA TUS EXITOS!</h2>
                 <div className="input-div-styles">
                     <div>

@@ -1,9 +1,25 @@
 footer {
   width: 100%;
   /* Full width */
-  background-color: #181717;
+  background-color: #000000;
   color: #fff;
   text-align: center;
   padding: 20px 0;
   margin-top: auto;
+}
+footer a {
+   padding-top:200px;
+}
+.mailfooter {
+  color: yellow;
+  margin-bottom: 10px;
+  padding-bottom: 20px;
+}
+.socialmediadiv{
+  margin-top: 7px;
+}
+
+.media_links {
+  background-color: #ffffff00;
+  font-weight: lighter;
 }
