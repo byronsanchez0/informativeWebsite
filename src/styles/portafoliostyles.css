@@ -9,6 +9,16 @@
     justify-content: center; /* Center the items horizontally */
     align-items: center; /* Center the items vertically */
     gap: 1px;
+    opacity: 0;
+    transition: 2.9s ease;
+}
+.visible {
+    opacity: 1;
+    background-color: rgba(240, 248, 255, 0);
+}
+.hidden {
+    opacity: 0;
+     background-color: rgb(255, 255, 255);
 }
 
 .griditems{
@@ -111,6 +121,7 @@
     width: 90wh;
     position: absolute;
 }
+
 
 
 

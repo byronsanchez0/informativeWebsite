@@ -5,19 +5,27 @@ import Footer from './components/footer';
 import NavigationComponent from './components/navigationComponent';
 import insta from './img/instalogo.png';
 import { MyProvider } from './components/ItemContext';
+import React, { useState, useEffect } from 'react';
 
 
 function App() {
+
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
   return (
     <body className="App">
+      <header className="App-header">
+        <Navbar />
+      </header>
       <div className="bckgrnd-style">
-        <header className="App-header">
-          <Navbar />
-        </header>
+
         <MyProvider>
-        <NavigationComponent />
+          <NavigationComponent />
         </MyProvider>
-        
+
       </div>
       <Footer />
     </body>
