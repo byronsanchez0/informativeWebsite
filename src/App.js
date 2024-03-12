@@ -20,14 +20,13 @@ function App() {
       <header className="App-header">
         <Navbar />
       </header>
-      <div className="bckgrnd-style">
-
+      <div className={`section ${isVisible ? 'visible' : 'hidden'}`}>
         <MyProvider>
           <NavigationComponent />
         </MyProvider>
-
+        <Footer />
       </div>
-      <Footer />
+      
     </body>
 
   );

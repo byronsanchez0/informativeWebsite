@@ -1,10 +1,9 @@
 .App {
-    background-color: rgb(0, 0, 253);
+    background-color: rgb(255, 255, 255);
     /*padding: 0px 100px;*/
-    margin-bottom: 0px;
 }
 
-.bckgrnd-style {
+.section {
     background-image: url("../img/fondo.png");
     background-color: rgb(30, 30, 31);
     display: flex;
@@ -18,5 +17,4 @@
 }
 .hidden {
     opacity: 0;
-     background-color: rgb(255, 255, 255);
 }

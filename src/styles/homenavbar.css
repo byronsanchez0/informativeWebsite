@@ -66,6 +66,14 @@ a {
     
 }
 
+.nav__item.acctive a{
+    color: aqua;
+}
+
+.nav__item a {
+    color: rgb(204, 204, 204);
+}
+
 
 
 /* .nav__link:hover::after {

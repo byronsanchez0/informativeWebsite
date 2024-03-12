@@ -3,23 +3,21 @@ import produccion from '../img/PRODUCCION.png';
 import TwoRowCarousel from '../components/carousel';
 import "react-multi-carousel/lib/styles.css";
 import { useState, useEffect } from 'react';
-import { isVisible } from '@testing-library/user-event/dist/utils';
+//import { isVisible } from '@testing-library/user-event/dist/utils';
 function Portafolio() {
 
-    
-
-    
-        const [isVisible, setIsVisible] = useState(false);
+        /* const [isVisible, setIsVisible] = useState(false);
  
 
     useEffect (() => {
         setIsVisible(true);
-    }, []);
+    }, []); */
     //{`section ${isVisible ? 'visible' : 'hidden'}`}
     return (
-        <body className='bckgrnd-style'>
+        <body >
                 
-            <section class={`grid-container ${isVisible ? 'visible' : 'hidden'} `}>
+            {/* <section class={`grid-container ${isVisible ? 'visible' : 'hidden'} `}> */}
+            <section >
                 <div className='griditems'>
                     <div class="grid-item1">
                     </div>

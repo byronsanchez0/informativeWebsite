@@ -6,6 +6,17 @@ import Contact from '../pages/Contact';
 import ItemDetails from '../components/ItemDetails';
 
 function navigationComponent() {
+
+  switch (window.location.pathname) {
+      case "/":
+        break
+        case"/About":
+        break
+        case"/Portafolio":
+        break
+        case"/Contact":
+        break
+  }
   return (
 
     <Router>

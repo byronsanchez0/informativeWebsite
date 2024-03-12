@@ -27,7 +27,6 @@ function Navbar({screen}) {
         } else setIcon("nav__toggler");
     };
 
-    var pageName = window.location.pathname;
 
     /*  const renderContent = () => {
          switch (activePage)
@@ -55,7 +54,7 @@ function Navbar({screen}) {
 
     // ESTOOOOOOOOOOO ES OTRA FORMA
      
-    const [activePage, setActivePage] = useState({getScreenName});
+    const [activePage, setActivePage] = useState('Home');
 
 
 
@@ -71,17 +70,13 @@ function Navbar({screen}) {
                 <img src={as} alt="asesores image" width={40} height={40}></img>
             </a>
             <ul className={active}>
-                <li className={activePage === 'Home' ? 'acctive' : ''}>
+                <li className={activePage === 'Home' ? 'nav__item acctive' : 'nav__item'}>
 
                 <a href="./" onClick={() => handleItemClick('Home')} >
                         INICIO
                     </a>
-
-
-
-
                 </li>
-                <li className={activePage == 'About' ? 'acctive' : ''}>
+                <li className={activePage == 'About' ? 'nav__item acctive' : 'nav__item '}>
                     <a href="./About" onClick={() => handleItemClick('About')} >
                         NOSOTROS
                     </a>
