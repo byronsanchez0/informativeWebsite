@@ -6,22 +6,26 @@
     height: 100vh;
     margin: 10px 1%;
     margin-bottom: -60px;
-    justify-content: center; /* Center the items horizontally */
-    align-items: center; /* Center the items vertically */
+    justify-content: center;
+    /* Center the items horizontally */
+    align-items: center;
+    /* Center the items vertically */
     gap: 1px;
-    opacity: 0;
+    opacity: 1;
     transition: 2.9s ease;
 }
-.visible {
+
+/* .visible {
     opacity: 1;
     background-color: rgba(240, 248, 255, 0);
 }
+
 .hidden {
     opacity: 0;
-     /* background-color: rgb(255, 255, 255); */
-}
+    background-color: rgb(255, 255, 255); 
+}*/
 
-.griditems{
+.griditems {
     background-color: rgba(238, 130, 238, 0);
     height: 816px;
     width: 525px;
@@ -34,12 +38,14 @@
     /* height: 7z0%;*/
     display: flex;
     text-align: center;
-    flex: 1; /* Allow item to grow to fill available space */
-    min-height: 0; /* Ensure item can shrink if needed */
+    flex: 1;
+    /* Allow item to grow to fill available space */
+    min-height: 0;
+    /* Ensure item can shrink if needed */
     align-content: center;
     height: 616px;
     width: 525px;
-    
+
 }
 
 .colum-div-1 {
@@ -48,10 +54,9 @@
     width: 525px;
     height: 16vh;
     padding: 15px;
-    position: inherit;
     text-align: center;
-    
-} 
+
+}
 
 .grid-item2 {
     background-image: url(/src/img/BTLEVENTOS.png);
@@ -60,8 +65,10 @@
     /* height: 7z0%;*/
     display: flex;
     text-align: center;
-    flex: 1; /* Allow item to grow to fill available space */
-    min-height: 0; /* Ensure item can shrink if needed */
+    flex: 1;
+    /* Allow item to grow to fill available space */
+    min-height: 0;
+    /* Ensure item can shrink if needed */
     align-content: center;
     height: 616px;
     width: 525px;
@@ -83,8 +90,10 @@
     /* height: 7z0%;*/
     display: flex;
     text-align: center;
-    flex: 1; /* Allow item to grow to fill available space */
-    min-height: 0; /* Ensure item can shrink if needed */
+    flex: 1;
+    /* Allow item to grow to fill available space */
+    min-height: 0;
+    /* Ensure item can shrink if needed */
     align-content: center;
     height: 616px;
     width: 525px;
@@ -114,20 +123,85 @@
 }
 
 .carousel {
-    background-color: rgba(16, 27, 5, 0);
+    background-color: rgba(128, 255, 0, 0);
 }
 
 .complete-carousel {
-    width: 90vh;
+    width: 100vh;
     position: absolute;
 }
 
 
-
-
 @media screen and (max-width: 768px) {
     .grid-container {
-        grid-template-columns: repeat(2, minmax(250px, 1fr));
-        /* Two columns for smaller screens */
+        /* Change to 1 column on mobile screens */
+        display: inline;
+       
+    }
+
+    .griditems {
+        background-color: rgba(115, 255, 0, 0);
+        width: 96.6vw;
+        height: 88vh;
+    }
+
+    .grid-item1 {
+        width: 96.6vw;
+    }
+
+    .grid-item2 {
+        width: 96.6vw;
+    }
+
+    .grid-item3 {
+        width: 96.6vw;
+    }
+    
+    .colum-div-1 {
+        background-color: rgb(225, 255, 54);
+        margin-top: auto;
+        width: 96.6vw;
+        height: 16vh;
+        padding: 15px;
+        text-align: center;
+    }
+    .colum-div-2 {
+        background-color: rgb(43, 170, 255);
+        margin-top: auto;
+        width: 96.6vw;
+        height: 16vh;
+        padding: 15px;
+        text-align: center;
+    }
+    .colum-div-3 {
+        background-color: rgb(255, 175, 27);
+        margin-top: auto;
+        width: 96.6vw;
+        height: 16vh;
+        padding: 15px;
+        text-align: center;
+    }
+}
+
+
+
+
+@media screen and (max-width: 464px) {
+    .grid-container {
+        grid-template-columns: repeat(1, 1fr);
+        /* Change to 1 column on mobile screens */
+    }
+
+    .grid-item1 {
+       
+        width: 96.6vw;
+    }
+
+    .grid-item2 {
+        width: 96.6vw;
+    }
+
+    .grid-item3 {
+        width: 96.6vw;
     }
 }

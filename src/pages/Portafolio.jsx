@@ -17,7 +17,7 @@ function Portafolio() {
         <body >
                 
             {/* <section class={`grid-container ${isVisible ? 'visible' : 'hidden'} `}> */}
-            <section >
+            <section className='grid-container'>
                 <div className='griditems'>
                     <div class="grid-item1">
                     </div>

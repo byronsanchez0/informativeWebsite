@@ -63,17 +63,14 @@ const TwoRowCarousel = () => {
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
       items: 4,
-      rows: 2,
     },
     tablet: {
-      breakpoint: { max: 1024, min: 464 },
+      breakpoint: { max: 1024, min: 721 },
       items: 2,
-      rows: 2,
     },
     mobile: {
-      breakpoint: { max: 464, min: 0 },
+      breakpoint: { max: 720, min: 0 },
       items: 1,
-      rows: 2,
     },
   };
 
@@ -131,27 +128,33 @@ const TwoRowCarousel = () => {
       <Carousel
         responsive={responsive}
         infinite={true}
-        slidesToSlide={4}
+        centerMode={true}
       >
+
         {items.map((item, index) => (
-          <div key={index} style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', padding: 0 }} >
+          <div  key={index} style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', padding: 0 }} >
+
             {item?.type === 'image' && (
               <Link to={'./item/${item.id}'}>
+                <div onClick={() => handleClick(item)} className="divtry">
                 <img
                   key={index}
                   src={item.src}
                   alt="img1dolofin"
                   width="600px"
                   height="400px"
-                  onClick={() => handleClick(item)}
+                  
                   className="carouselImage"
+
                 />
+                </div>
+                
               </Link>
 
             )}
             {item?.type === 'video' && (
               <Link to={'./item/${item.id}'}>
-                <div onClick={() => handleClick(item)}>
+                <div onClick={() => handleClick(item)} className="divtry">
                   <video
                     src={item.src}
                     autoPlay
@@ -163,15 +166,15 @@ const TwoRowCarousel = () => {
                   />
                 </div>
               </Link>
-
-
             )}
+            
           </div>
         ))}
 
       </Carousel>
 
       {showModal && <ItemDetails onClose={showModal} />}
+
 
     </div >
 

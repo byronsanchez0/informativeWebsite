@@ -7,10 +7,10 @@ function footer() {
             <a href="./Contact" className="mailfooter"> grupo@asesores.com.sv</a>
             <br />
             <div className="socialmediadiv">
-            <a href="https://www.facebook.com/grupoasesores.sv" className="media_links">
+            <a href="https://www.facebook.com/grupoasesores.sv" className="media_links" target="_blank">
                 <img src={fb} alt="insta image" width={35} height={35}></img>
             </a>
-            <a href="https://www.instagram.com/grupoasesores.sv/" className="media_links">
+            <a href="https://www.instagram.com/grupoasesores.sv/" className="media_links" target="_blank">
                 <img src={insta} alt="insta image" width={35} height={35}></img>
             </a>
             </div>

@@ -11,7 +11,7 @@ body {
     /* Allow main content to grow to fill remaining space */
     overflow-y: auto;
     /* Enable vertical scrolling if content overflows */
-    height: 100vh;
+    height: 80vh;
     /* Example maximum height */
 }
 
@@ -19,7 +19,7 @@ body {
     background-image: url(/src/img/fono-nosotros.png);
     background-size: cover;
     background-position: center;
-    background-color: #f0f0f0;
+    background-color: #f0f0f000;
     display: grid;
     /*grid-template-columns: repeat(4, 1fr); */
     /* 4 columns */
@@ -44,8 +44,8 @@ body {
 .aboutgrid-1 {
     /* background-image: url(/src/img/fono-nosotros.png);
     background-size: cover;
-    background-position: center;
-    background-color: #f0f0f0; */
+    background-position: center;*/
+    background-color: #f0f0f000; 
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     /* 4 columns */
@@ -67,6 +67,7 @@ body {
     width: 46vw;
     margin-top: 1%;
     margin-bottom: 5%;
+    text-align: center;
 }
 
 .gridtitle h1 {
@@ -141,6 +142,61 @@ body {
         grid-template-columns: repeat(1, 1fr);
         /* Two columns for smaller screens */
 
+    }
+     
+    /*TITLE*/
+
+    .gridtitle {
+        font-size: 30px;
+        font-weight: bold;
+        background-color: rgba(185, 37, 37, 0);
+        /*position: absolute;*/
+        width: 95vw;
+        margin-top: 1%;
+        margin-bottom: 5%;
+        align-items: center;
+    }
+     
+    .gridtitle h1 {
+        color: white;
+    }
+    
+    .gridtitle .secondtitlegrid {
+        color: rgb(255, 255, 255);
+    }
+
+    .aboutgrid-1 {
+        /* background-image: url(/src/img/fono-nosotros.png);
+        background-size: cover;
+        background-position: center;*/
+        background-color: #f0f0f000; 
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        /* 4 columns */
+        grid-template-rows: repeat(4, 100px);
+        /* 3 rows */
+        gap: 1px;
+        /* Gap between grid items */
+        padding: 1%;
+        border: 0%;
+        /* height: 7z0%;*/
+        text-align: center;
+    }
+
+    .aboutgrid-2 {
+        background-color: #00aeff;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        /* 4 columns */
+        grid-template-rows: repeat(4, 150px);
+        /* 3 rows */
+        gap: 1px;
+        /* Gap between grid items */
+        padding: 1%;
+        border: 0%;
+        /* height: 7z0%;*/
+        justify-self: center;
+        text-align: center;
     }
 
     .aboutgrid-item {

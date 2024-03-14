@@ -79,24 +79,55 @@
 }
 
 .carouselImage {
-  width: 600px;
-  height: 400px;
+  width: 650px;
+  height: 450px;
   transition: transform 0.2s;
+  object-fit: cover;
+  z-index: 999999999;
 }
 .videocarrosel {
   background-color: aqua;
   object-fit: cover;
-  transition: transform 0.2s;
-  width: 600px;
-  height: 400px;
+  width: 650px;
+  
+  height: 450px;
   /* justify-self: center; */
 }
 
 .carouselImage:hover {
-  transform: scale(1.1) ;
+  opacity: 0.4;
+  
+  transition: opacity 0.4s ease-in-out;
   /* Example: Increase the size on hover */
 }
 .videocarrosel:hover {
-  transform: scale(1.2) ;
+  z-index: 999999999;
+  transition: opacity 0.4s ease-in-out;
+  opacity: 0.4;
   /* Example: Increase the size on hover */
+} 
+
+.divtry {
+ background-color: rgb(255, 255, 255);
+ height: 450px;
+}
+.divtry:hover {
+  transform: scale(1.02) ;
+  transition: transform 0.5s ease-in-out;
+ }
+
+@media screen and (max-width: 768px) {
+  .grid-container {
+      grid-template-columns: repeat(2, minmax(250px, 1fr));
+      /* Two columns for smaller screens */
+  }
+  .videocarrosel {
+    background-color: aqua;
+    object-fit: cover;
+    transition: transform 0.2s;
+    width: 600px;
+    height: 450px;
+    /* justify-self: center; */
+  }
+  
 }

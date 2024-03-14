@@ -19,9 +19,11 @@ function App() {
     <body className="App">
       <header className="App-header">
         <Navbar />
+        FALTA APLICAR ANIMACION TRANSICION, RESPONSIVE INICIO 
       </header>
       <div className={`section ${isVisible ? 'visible' : 'hidden'}`}>
         <MyProvider>
+          
           <NavigationComponent />
         </MyProvider>
         <Footer />

@@ -32,7 +32,8 @@ const ItemDetails = ({ onClose }) => {
                 {selectedItem?.type === 'image' && (
                     <img src={selectedItem.src} alt="imgsrc"
                         width="1080px"
-                        height="720px" />
+                        height="720px" 
+                        className="contentdiv"/>
 
 
                 )
