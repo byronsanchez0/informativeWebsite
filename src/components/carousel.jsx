@@ -74,12 +74,6 @@ const TwoRowCarousel = () => {
     },
   };
 
-  /* const handleClickImage = (index) => {
-    setSelectedImage(items[index]);
-    console.log('Clicked', index);
-
-  } */
-
   const handleClick = (item) => {
     handleSelectedItem(item);
     setShowModal(true);
@@ -91,32 +85,6 @@ const TwoRowCarousel = () => {
     setShowModal(false);
     console.log('eto NO furula');
   }
-
-  /* const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slideToShow: 4,
-    slidesToScroll: 1,
-    rows: 2,
-    responsive: [
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 2,
-          rows: 2,
-        }
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          rows: 2,
-        }
-      }
-    ]
-
-  } */
 
   return (
 
@@ -132,23 +100,21 @@ const TwoRowCarousel = () => {
       >
 
         {items.map((item, index) => (
-          <div  key={index} style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', padding: 0 }} >
+          <div key={index} style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', padding: 0 }} >
 
             {item?.type === 'image' && (
               <Link to={'./item/${item.id}'}>
                 <div onClick={() => handleClick(item)} className="divtry">
-                <img
-                  key={index}
-                  src={item.src}
-                  alt="img1dolofin"
-                  width="600px"
-                  height="400px"
-                  
-                  className="carouselImage"
-
-                />
+                  <img
+                    key={index}
+                    src={item.src}
+                    alt="img1dolofin"
+                    width="600px"
+                    height="400px"
+                    className="carouselImage"
+                  />
                 </div>
-                
+
               </Link>
 
             )}
@@ -167,7 +133,7 @@ const TwoRowCarousel = () => {
                 </div>
               </Link>
             )}
-            
+
           </div>
         ))}
 

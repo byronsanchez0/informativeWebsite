@@ -14,7 +14,7 @@ function Portafolio() {
     }, []); */
     //{`section ${isVisible ? 'visible' : 'hidden'}`}
     return (
-        <body >
+        <body className='bodyporta'>
                 
             {/* <section class={`grid-container ${isVisible ? 'visible' : 'hidden'} `}> */}
             <section className='grid-container'>

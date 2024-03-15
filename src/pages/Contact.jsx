@@ -29,37 +29,50 @@ function Contact() {
 
     const namePattern = /^[a-zA-Z]{3,}$/;
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    
 
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        emailjs
-            .sendForm('service_lkco6o7', 'template_vgb30do', form.current, {
-                publicKey: 'jzVHJ8JChg0wsd_VK',
-            })
-            .then(
-                () => {
-                    console.log('SUCCESS!');
-                    console.log('message send!');
-                },
-                (error) => {
-                    console.log('FAILED...', error.text);
-                },
-            );
+
+
         const errors = {};
 
 
         if (!formData.name.trim()) {
-            errors.name = 'Username is required';
+            errors.name = 'Este campo es obligatorio';
         } else if (!namePattern.test(formData.name)) {
-            errors.name = 'Name must be at least 3 characters long and contain only letters';
+            errors.name = 'El nombre debe contener solo letras y por lo menos 3 caracteres.';
         }
         if (!formData.email.trim()) {
-            errors.email = 'Email is required';
+            errors.email = 'Este campo es obligatorio';
         } else if (!emailPattern.test(formData.email)) {
-            errors.email = 'Invalid email format ';
+            errors.email = 'Formato de email inválido';
+        }
+        if (!formData.subject.trim()) {
+            errors.subject = 'Asunto vacío, por favor rellene este campo.';
+        }
+        if (!formData.message.trim()) {
+            errors.message = 'Mensaje vacío, por favor rellene este campo.';
         }
         setFormErrors(errors);
+
+        //sending the form if 
+        if (Object.keys(errors).length === 0) {
+            emailjs
+                .sendForm('service_lkco6o7', 'template_vgb30do', form.current, {
+                    publicKey: 'jzVHJ8JChg0wsd_VK',
+                })
+                .then(
+                    () => {
+                        console.log('SUCCESS!');
+                        console.log('message send!');
+                    },
+                    (error) => {
+                        console.log('FAILED...', error.text);
+                    },
+                );
+        }
 
         console.log(formData);
         // Reset the form after submission
@@ -98,9 +111,10 @@ function Contact() {
                             className="inputClass"
                             value={formData.name}
                             onChange={handleChange}
-                            style={{borderColor: formErrors.name && 'red'}}
-                            //onBlur={handleBlur}
-                            //required
+
+                            style={{ borderColor: formErrors.name && 'red' }}
+                        //onBlur={handleBlur}
+                        //required
                         />
                         {formErrors.name && <p>{formErrors.name}</p>}
                     </div>
@@ -119,7 +133,7 @@ function Contact() {
                             value={formData.email}
                             onChange={handleChange}
                             //required
-                            style={{borderColor: formErrors.email && 'red'}}
+                            style={{ borderColor: formErrors.email && 'red' }}
                         />
                         {formErrors.email && <p>{formErrors.email}</p>}
                     </div>
@@ -135,8 +149,10 @@ function Contact() {
                             placeholder="Evento publicitario"
                             value={formData.subject}
                             onChange={handleChange}
-                            required
+                            style={{ borderColor: formErrors.subject && 'red' }}
+                        //required
                         />
+                        {formErrors.subject && <p>{formErrors.subject}</p>}
                     </div>
                 </div>
 
@@ -152,8 +168,10 @@ function Contact() {
                             placeholder="Mi mensaje aqui"
                             value={formData.message}
                             onChange={handleChange}
-                            required
+                            style={{ borderColor: formErrors.message && 'red' }}
+                        //required
                         />
+                        {formErrors.message && <p>{formErrors.message}</p>}
                     </div>
                 </div>
                 <div className="btn-form-style">
@@ -161,7 +179,7 @@ function Contact() {
                 </div>
 
             </form>
-            <div className="maps-styles">
+            <div className="maps-styles" >
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3876.3793743038445!2d-89.20882992402996!3d13.695457986690617!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f6330f700b2270f%3A0x41384fce5621d896!2sGrupo%20Asesores!5e0!3m2!1sen!2ssv!4v1709071880778!5m2!1sen!2ssv" width="100%" height="400" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </section>

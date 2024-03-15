@@ -7,20 +7,24 @@ import ItemDetails from '../components/ItemDetails';
 
 function navigationComponent() {
 
+  /* let component 
   switch (window.location.pathname) {
       case "/":
+        component = <Home/>
         break
         case"/About":
+        component = <About/>
         break
         case"/Portafolio":
+        component = <Portafolio/>
         break
         case"/Contact":
+        component = <Contact/>
         break
-  }
+  } */
   return (
 
     <Router>
-      
       <Routes>
         <Route path="/" exact Component={Home} />
         <Route path="/About" exact Component={About} />

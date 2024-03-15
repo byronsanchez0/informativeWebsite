@@ -74,6 +74,13 @@ a {
     color: rgb(204, 204, 204);
 }
 
+.nav li.active a{
+    color: greenyellow;
+  }
+  
+  .nav li:hover {
+    background-color: #777;
+  }
 
 
 /* .nav__link:hover::after {

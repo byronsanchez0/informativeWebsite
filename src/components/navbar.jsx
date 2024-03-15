@@ -64,23 +64,23 @@ function Navbar({screen}) {
 
     };
 
+    function CustomLink({ href, children, ...props }) {
+        const path = window.location.pathname
+        return (
+            <li className={path === href ? "active" : ""}>
+                <a href={href} {...props}>{children}</a> 
+            </li>
+        )
+    }
+
     return (
         <nav className="nav">
             <a href="/" className="nav__link" >
                 <img src={as} alt="asesores image" width={40} height={40}></img>
             </a>
             <ul className={active}>
-                <li className={activePage === 'Home' ? 'nav__item acctive' : 'nav__item'}>
-
-                <a href="./" onClick={() => handleItemClick('Home')} >
-                        INICIO
-                    </a>
-                </li>
-                <li className={activePage == 'About' ? 'nav__item acctive' : 'nav__item '}>
-                    <a href="./About" onClick={() => handleItemClick('About')} >
-                        NOSOTROS
-                    </a>
-                </li>
+            <CustomLink href="/About">Nosotros</CustomLink>
+            <CustomLink href="/Portafolio">Portafolio</CustomLink>
                 <li className={activePage === 'Portafolio' ? 'acctive' : ''}>
                     <a href="./Portafolio" onClick={() => handleItemClick('Portafolio')}>
                         PORTAFOLIO

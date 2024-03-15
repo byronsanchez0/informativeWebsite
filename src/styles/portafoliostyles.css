@@ -4,7 +4,7 @@
     /*grid-template-colums: repeat(3, 1fr);*/
     grid-template-columns: repeat(3, 550px);
     height: 100vh;
-    margin: 10px 1%;
+    margin: 1px 1%;
     margin-bottom: -60px;
     justify-content: center;
     /* Center the items horizontally */
@@ -131,7 +131,10 @@
     position: absolute;
 }
 
-
+.bodyporta {
+    background-image: url("../img/fondo.png");
+    background-size: cover;
+}
 @media screen and (max-width: 768px) {
     .grid-container {
         /* Change to 1 column on mobile screens */
@@ -142,7 +145,7 @@
     .griditems {
         background-color: rgba(115, 255, 0, 0);
         width: 96.6vw;
-        height: 88vh;
+        height: 75vh;
     }
 
     .grid-item1 {

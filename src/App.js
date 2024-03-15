@@ -15,15 +15,30 @@ function App() {
   useEffect(() => {
     setIsVisible(true);
   }, []);
+
+  /* let component 
+  switch (window.location.pathname) {
+      case "/":
+        component = <Home/>
+        break
+        case"/About":
+        component = <About/>
+        break
+        case"/Portafolio":
+        component = <Portafolio/>
+        break
+        case"/Contact":
+        component = <Contact/>
+        break
+  } */
+
   return (
     <body className="App">
       <header className="App-header">
         <Navbar />
-        FALTA APLICAR ANIMACION TRANSICION, RESPONSIVE INICIO 
       </header>
       <div className={`section ${isVisible ? 'visible' : 'hidden'}`}>
         <MyProvider>
-          
           <NavigationComponent />
         </MyProvider>
         <Footer />

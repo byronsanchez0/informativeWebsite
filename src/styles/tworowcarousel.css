@@ -129,5 +129,14 @@
     height: 450px;
     /* justify-self: center; */
   }
+  .divtry {
+    background-color: rgb(255, 255, 255);
+    height: 350px;
+    width: 450px;
+    align-items: center;
+    align-self: center;
+    justify-content: center;
+    object-fit: cover;
+   }
   
 }
