@@ -76,7 +76,7 @@ const TwoRowCarousel = () => {
 
   const handleClick = (item) => {
     handleSelectedItem(item);
-    setShowModal(true);
+    setShowModal(!showModal);
     console.log('eto furula');
   }
 

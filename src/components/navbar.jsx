@@ -75,22 +75,14 @@ function Navbar({screen}) {
 
     return (
         <nav className="nav">
-            <a href="/" className="nav__link" >
+            <a href="/" className="nav__link" > 
                 <img src={as} alt="asesores image" width={40} height={40}></img>
             </a>
             <ul className={active}>
+            <CustomLink href="/">Inicio</CustomLink>
             <CustomLink href="/About">Nosotros</CustomLink>
             <CustomLink href="/Portafolio">Portafolio</CustomLink>
-                <li className={activePage === 'Portafolio' ? 'acctive' : ''}>
-                    <a href="./Portafolio" onClick={() => handleItemClick('Portafolio')}>
-                        PORTAFOLIO
-                    </a>
-                </li>
-                <li className={activePage === 'Contact' ? 'acctive' : ''}>
-                    <a href="./Contact" onClick={() => handleItemClick('Contact')}>
-                        CONTACTO
-                    </a>
-                </li>
+            <CustomLink href="/Contact">Contacto</CustomLink>
                 <li className="nav__item">
                     <a href="https://www.facebook.com/grupoasesores.sv" className="nav__link" target="_blank">
                         <img src={fb} alt="fb image" width={40} height={40}></img>

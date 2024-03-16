@@ -21,8 +21,8 @@
     z-index: 999;
     color: black;
     position: absolute;
-    margin-bottom: 38.5%;
-    margin-left: 81%;
+    margin-bottom: 33%;
+    margin-left: 80%;
     text-align: center;
     border-radius: 10px;
 }
@@ -30,12 +30,12 @@
 .closeitem:hover {
     background-color: rgba(0, 0, 0, 0.541);
 }
-
+    
 .firstdiv {
     background-color: rgb(255, 255, 255);
     align-self: center;
     align-items: center;
-    height: 85vh;
+    height: 75vh;
     width: 90%;
     margin-top: 1%;
     margin-left: 4.3%;
@@ -154,12 +154,13 @@
 @media screen and (max-width: 464px) {
 
     .closeitem {
-
-        margin-top: -5%;
+        background-color: rgb(247, 247, 247);
+        margin-top: -3%;
+        color: black;
     }
 
     .firstdiv {
 
-        width: 50vw;
+        width: 90vw;
     }
 }

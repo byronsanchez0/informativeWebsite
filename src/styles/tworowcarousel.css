@@ -85,50 +85,55 @@
   object-fit: cover;
   z-index: 999999999;
 }
+
 .videocarrosel {
   background-color: aqua;
   object-fit: cover;
   width: 650px;
-  
+
   height: 450px;
   /* justify-self: center; */
 }
 
 .carouselImage:hover {
   opacity: 0.4;
-  
+
   transition: opacity 0.4s ease-in-out;
   /* Example: Increase the size on hover */
 }
+
 .videocarrosel:hover {
   z-index: 999999999;
   transition: opacity 0.4s ease-in-out;
   opacity: 0.4;
   /* Example: Increase the size on hover */
-} 
+}
 
 .divtry {
- background-color: rgb(255, 255, 255);
- height: 450px;
+  background-color: rgb(255, 255, 255);
+  height: 450px;
 }
-.divtry:hover {
-  transform: scale(1.02) ;
-  transition: transform 0.5s ease-in-out;
- }
 
-@media screen and (max-width: 768px) {
+.divtry:hover {
+  transform: scale(1.02);
+  transition: transform 0.5s ease-in-out;
+}
+
+@media screen and (max-width: 768px) and (min-width: 320px) {
   .grid-container {
-      grid-template-columns: repeat(2, minmax(250px, 1fr));
-      /* Two columns for smaller screens */
+    grid-template-columns: repeat(2, minmax(250px, 1fr));
+    /* Two columns for smaller screens */
   }
+
   .videocarrosel {
     background-color: aqua;
     object-fit: cover;
     transition: transform 0.2s;
-    width: 600px;
+    width: 100vw;
     height: 450px;
     /* justify-self: center; */
   }
+
   .divtry {
     background-color: rgb(255, 255, 255);
     height: 350px;
@@ -137,6 +142,5 @@
     align-self: center;
     justify-content: center;
     object-fit: cover;
-   }
-  
+  }
 }
