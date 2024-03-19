@@ -79,17 +79,18 @@
 }
 
 .carouselImage {
-  width: 650px;
+  width: 50vw;
   height: 450px;
-  transition: transform 0.2s;
   object-fit: cover;
-  z-index: 999999999;
+  transition: transform 0.2s;
 }
 
 .videocarrosel {
   background-color: aqua;
   object-fit: cover;
-  width: 650px;
+  width: 50vw;
+  
+  height: 450px;
 
   height: 450px;
   /* justify-self: center; */
@@ -103,7 +104,6 @@
 }
 
 .videocarrosel:hover {
-  z-index: 999999999;
   transition: opacity 0.4s ease-in-out;
   opacity: 0.4;
   /* Example: Increase the size on hover */
@@ -112,12 +112,18 @@
 .divtry {
   background-color: rgb(255, 255, 255);
   height: 450px;
+  width: 100vw;
+
 }
 
 .divtry:hover {
   transform: scale(1.02);
   transition: transform 0.5s ease-in-out;
 }
+
+/* .slick-slide .slick-active {
+  width: 10px;
+} */
 
 @media screen and (max-width: 768px) and (min-width: 320px) {
   .grid-container {
@@ -130,14 +136,52 @@
     object-fit: cover;
     transition: transform 0.2s;
     width: 100vw;
-    height: 450px;
+    height: 50vh;
     /* justify-self: center; */
+  }
+  .carouselImage {
+    width: 100vw;
+    height: 40vh;
+    transition: transform 0.2s;
+    object-fit: cover;
   }
 
   .divtry {
     background-color: rgb(255, 255, 255);
     height: 350px;
-    width: 450px;
+    width: 100vw;
+    align-items: center;
+    align-self: center;
+    justify-content: center;
+    object-fit: cover;
+  }
+}
+
+@media screen and (min-width: 1300)  {
+  .grid-container {
+    grid-template-columns: repeat(2, minmax(250px, 1fr));
+    /* Two columns for smaller screens */
+  }
+
+  .videocarrosel {
+    background-color: aqua;
+    object-fit: cover;
+    transition: transform 0.2s;
+    width: 100vw;
+    height: 50vh;
+    /* justify-self: center; */
+  }
+  .carouselImage {
+    width: 100vw;
+    height: 40vh;
+    transition: transform 0.2s;
+    object-fit: cover;
+  }
+
+  .divtry {
+    background-color: rgb(255, 255, 255);
+    height: 350px;
+    width: 100vw;
     align-items: center;
     align-self: center;
     justify-content: center;

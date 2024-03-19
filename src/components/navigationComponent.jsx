@@ -4,6 +4,7 @@ import About from '../pages/About';
 import Portafolio from '../pages/Portafolio';
 import Contact from '../pages/Contact';
 import ItemDetails from '../components/ItemDetails';
+import {AnimatePresence} from "framer-motion";
 
 function navigationComponent() {
 
@@ -25,6 +26,7 @@ function navigationComponent() {
   return (
 
     <Router>
+      <AnimatePresence>
       <Routes>
         <Route path="/" exact Component={Home} />
         <Route path="/About" exact Component={About} />
@@ -32,7 +34,7 @@ function navigationComponent() {
         <Route path="/Contact" exact Component={Contact} />
         <Route path="/Portafolio/item/:id" exact Component={ItemDetails}/>
       </Routes>
-
+      </AnimatePresence>
     </Router>
   );
 }

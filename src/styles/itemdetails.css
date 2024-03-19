@@ -88,7 +88,35 @@
     width: 100%;
 } */
 
+@media screen and (max-width: 1300px) { 
+    .closeitem {
+        position: absolute;
+        margin-top: -64%;
+        margin-left: 77.3%;
+        width: 50px;
+        height: 50px;
+        font-size: 30px;
+        text-align: center;
+        color: white;
+        background-color: rgba(0, 0, 0, 0.63);
+    }
 
+    .closeitem:hover {
+        color: rgb(0, 0, 0);
+        background-color: rgba(255, 255, 255, 0.562);
+    }
+    .firstdiv {
+        background-color: rgb(255, 255, 255);
+        align-self: center;
+        align-items: center;
+        height: 75vh;
+        width: 90%;
+        margin-top: 1%;
+        margin-left: 5%;
+        display: flex;
+        padding: 5%;
+    }
+}
 
 @media screen and (max-width: 768px) {
 
