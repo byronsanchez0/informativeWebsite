@@ -53,11 +53,11 @@ function About() {
                     <motion.h1 className="h1-item2" initial={{ width: 0 }} animate={{ width: "100%" }} exit={{ x: window.innerWidth }}
                         transition={{ ease: "easeOut", duration: 0.4 }}>EL SALVADOR</motion.h1>
                     <motion.p className="p-item2" initial={{ width: 0 }} animate={{ width: "100%" }} exit={{ x: window.innerWidth }}
-                        transition={{ ease: "easeOut", duration: 0.4 }}>22 AÑOS</motion.p>
+                        transition={{ ease: "easeOut", duration: 0.4 }}>23 AÑOS</motion.p>
                     <motion.h1 className="h1-item2" initial={{ width: 0 }} animate={{ width: "100%" }} exit={{ x: window.innerWidth }}
                         transition={{ ease: "easeOut", duration: 0.4 }}>GUATEMALA</motion.h1>
                     <motion.p className="p-item2" initial={{ width: 0 }} animate={{ width: "100%" }} exit={{ x: window.innerWidth }}
-                        transition={{ ease: "easeOut", duration: 0.4 }}>16 AÑOS</motion.p>
+                        transition={{ ease: "easeOut", duration: 0.4 }}>17 AÑOS</motion.p>
                     <motion.h1 className="h1-item2" initial={{ width: 0 }} animate={{ width: "100%" }} exit={{ x: window.innerWidth }}
                         transition={{ ease: "easeOut", duration: 0.4 }}>COBERTURA</motion.h1>
                     <motion.p className="p-item2" initial={{ width: 0 }} animate={{ width: "100%" }} exit={{ x: window.innerWidth }}

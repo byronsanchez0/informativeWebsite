@@ -2,6 +2,7 @@ import { useContext, useState } from "react";
 import { useParams } from "react-router-dom"
 import MyContext from './ItemContext';
 import '../styles/itemdetails.css';
+import { motion } from "framer-motion";
 
 const ItemDetails = ({ onClose }) => {
 
@@ -25,7 +26,8 @@ const ItemDetails = ({ onClose }) => {
 
 
 
-            <div className="firstdiv">
+            <motion.div className="firstdiv" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ x: window.innerHeight }}
+                        transition={{ ease: "easeIn", duration: 1.7 }}>
                 <a href="/Portafolio" className="closeitem">
                     x
                 </a>
@@ -60,7 +62,7 @@ const ItemDetails = ({ onClose }) => {
                         </div>
                     )
                 }
-            </div>
+            </motion.div>
 
             {/* <div className="seconddiv">
 

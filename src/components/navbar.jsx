@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 import "../styles/homenavbar.css";
 import insta from '../img/instalogo.png';
 import fb from '../img/fblogo.png';
-import as from '../img/logo.png';
+import as from '../img/aros-LOGO-ASESORES.png';
 import AboutScreen from '../pages/About';
 //import {Link, useMatch, useResolvedPath} from "react-router-dom";
 
