@@ -97,7 +97,7 @@ function Contact() {
         <section className="form-container">
             <div></div>
 
-            <motion.form className="form-style" onSubmit={handleSubmit} ref={form} >
+            <motion.form className="form-style" onSubmit={handleSubmit} ref={form} style={{ marginBottom: formErrors.email && '70px' }}>
                 <h2 className="formTitle">¡COTIZA TUS EXITOS!</h2>
                 <div className="input-div-styles">
                     <div>
@@ -184,7 +184,7 @@ function Contact() {
                     </div>
                 </div>
                 <div className="btn-form-style">
-                    <motion.button type="submit" initial={{ width: 0 }} animate={{ width: "100%" }} exit={{ x: window.innerWidth }}
+                    <motion.button type="submit" initial={{ width: 0 }} animate={{ width: "60px" }} exit={{ x: window.innerWidth }}
                             transition={{ ease: "easeOut", duration: 0.4 }}>Enviar</motion.button>
                 </div>
 

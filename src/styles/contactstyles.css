@@ -119,9 +119,10 @@ textarea:invalid {
     background-color: rgb(0, 255, 255);
 
 }
-.div-input-area p{
+
+.div-input-area p {
     font-size: 12px;
-    
+
 }
 
 .form-style button {
@@ -188,7 +189,7 @@ input {
 @media screen and (max-width: 527px) {
 
     .maps-styles {
-        margin-top: 3%;
+        margin-top: 20%;
         margin-left: 1.3%;
         margin-right: 1.3%;
     }
@@ -196,10 +197,30 @@ input {
     .form-style button {
         margin-right: 5%;
     }
+
     .btn-form-style {
         margin-right: 38px;
     }
+
     /* .form-container button{
         margin-right: 5%;
     } */
+}
+
+.form-style button {
+    background-color: rgb(229, 255, 0);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-color: rgba(240, 248, 255, 0);
+    margin-top: 1%;
+    margin-bottom: 6%;
+    font-weight: bolder;
+    font-size: 12px;
+    width: 60px;
+    height: 100%;
+}
+
+.form-style button:hover {
+    background-color: rgb(229, 255, 0);
+    color: rgb(27, 27, 27);
 }
