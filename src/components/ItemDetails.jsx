@@ -36,8 +36,6 @@ const ItemDetails = ({ onClose }) => {
                         width="1080px"
                         height="720px" 
                         className="contentdiv"/>
-
-
                 )
                 }
                 {
@@ -50,7 +48,6 @@ const ItemDetails = ({ onClose }) => {
                             width="1080px"
                             height="720px"
                             className="videodiv" />
-
                     )
                 }
 

@@ -6,23 +6,22 @@ import { useState, useEffect, useContext } from 'react';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
-import tarjeta from '../img/carousel/19tarjeta.png';
+import madera from '../img/imgcarousel/Madera.png';
 import constancia from '../img/carousel/23laconstancia.jpeg';
 import videotigo from '../img/carousel/17tigovideo.mp4';
-import ricolino from '../img/carousel/6ricolino.jpg';
-import img2 from '../img/carousel/2boda.jpg';
-import img4 from '../img/carousel/4agendabimbo.jpg';
-import img5 from '../img/carousel/5banquete.jpg';
-import img7 from '../img/carousel/7desk.jpg';
-import img9 from '../img/carousel/9planning.jpg';
-import img10 from '../img/carousel/10cubo.png';
-import img11 from '../img/carousel/11radicaltoast.jpg';
-import img12 from '../img/carousel/12mcdonald.jpg';
-import img13 from '../img/carousel/13bimbo2.png';
-import img14 from '../img/carousel/14cubo2.png';
-import img15 from '../img/carousel/15happynewyear.jpg';
-import img16 from '../img/carousel/16open.jpg';
-import img17 from '../img/carousel/18sabana.png';
+import disensaoffset from '../img/imgcarousel/Offset.png';
+import plotterBancoAzul from '../img/imgcarousel/Plotter.png';
+import metaDay from '../img/imgcarousel/Estructura.png';
+import promocionalFanta from '../img/imgcarousel/Promocional.png';
+import acrilicoBINAES from '../img/imgcarousel/Acrílico.png';
+import digitalcri from '../img/imgcarousel/Digital.png';
+import activacionPanda from '../img/imgcarousel/Activacion BTL.png';
+import eventoTp from '../img/imgcarousel/Eventos.png';
+import termoformadoPilsener from '../img/imgcarousel/Termoformado.png';
+import serigraifaLoto from '../img/imgcarousel/Serigrafia.png';
+import coprteLaser from '../img/imgcarousel/Corte Laser.png';
+import eventoNewYear from '../img/carousel/15happynewyear.jpg';
+import impresionUv from '../img/imgcarousel/UV.png';
 import img18 from '../img/carousel/19tarjeta.png';
 import img19 from '../img/carousel/20helada.jpg';
 import img20 from '../img/carousel/21gasofa.jpeg';
@@ -54,21 +53,21 @@ useEffect (() => {
 
   const [items, setItems] = useState(
     [
-      { id: 1, title: "Papeleria Corporativa", description: "Diseño y producción de papelería corporativa. Que tu marca impacte con detalles en barniz registrado.", type: 'image', src: tarjeta },
-      { id: 2, title: "REEL EVENTO TIGOOOL", description: "Video resumen de evento Tigoool.", type: 'video', src: videotigo },
-      { id: 3, title: "Evento x", description: "se hizo evento x", type: 'image', src: img2 },
-      { id: 4, title: "Evento Ricolino", description: "Evento Ricolino ", type: 'image', src: ricolino },
-      { id: 5, title: "Evento x", description: "Se hizo evento x", type: 'image', src: img2 },
-      { id: 6, title: "Agenda Corporativa, Bimbo El Salvador", description: "Diseño y producción de agendas corporativas personalizadas para planeación comercial.", type: 'image', src: img4 },
-      { id: 7, title: "Evento x", description: "Se hizo Evento x", type: 'image', src: img5 },
-      { id: 8, title: "Trabajo profesional", description: "Realizamos un trabajo integral", type: 'image', src: img7 },
-      { id: 9, title: "Trabajo en equipo", description: "Planeacion con el mejor equipo", type: 'image', src: img9 },
-      { id: 10, title: "Kit Promocional, Cubo Pago.", description: "Se hizo Evento x", type: 'image', src: img10 },
-      { id: 11, title: "Rótulo con luz troquelado.", description: "Diseño y producción de kit promocional para comercios afiliados al nuevo sistema de pago Cubo.", type: 'image', src: img11 },
-      { id: 12, title: "Evento x", description: "Producción de rótulo en acrílico con detalles de luces para papas McDonalds.", type: 'image', src: img12 },
-      { id: 13, title: "Evento x", description: "Se hizo Evento x", type: 'image', src: img13 },
-      { id: 14, title: "Evento x", description: "Se hizo Evento x", type: 'image', src: img14 },
-      { id: 16, title: "Evento de Año Nuevo, Teleperformance.", description: "Diseño y montaje de evento para fiesta corporativa, Teleperformance El Salvador.", type: 'image', src: img15 },
+      { id: 1, title: "Diseño y producción", description: "Madera: Diseño y producción Spot al estilo Corona Sunsets", type: 'image', src: madera },
+      { id: 2, title: "Evento Tigool", description: "Video resumen de evento Tigoool.", type: 'video', src: videotigo },
+      { id: 3, title: "Offset disensa", description: "Producción de impresión offset de vanguardia para ofrecerte abanicos, revistas, folletos, catálogos y más en la calidad más alta.", type: 'image', src: disensaoffset },
+      { id: 4, title: "Impresión UV", description: "Rótulos impresos sobre ACM con efecto realzado UV Emboss Clear para generar el sistema de lectoescritura táctil. ", type: 'image', src: impresionUv },
+      { id: 5, title: "Meta Day El Salvador ", description: "Estructura: Meta Day El Salvador nos permitió explotar nuestra creatividad y producción colaborando en conjunto con nuestro partner @Meta sobre sus estrategias digitales para el sector universiatrio, pequeña empresa y Ministerio de Economía en El Salvador", type: 'image', src: metaDay },
+      { id: 6, title: "Lanzamiento Fanta: promocional", description: "Promocional: ¡Kit Promocional! Bajo lanzamiento Fanta sabor Piña. Nos encantó ser parte de los detalles diseñando, produciendo y empacando todo en un mismo lugar", type: 'image', src: promocionalFanta },
+      { id: 7, title: "Acrílico", description: "Diseño y producción de área temática BINAES, Impresión directa sobre acrílico troquelado con luz led.", type: 'image', src: acrilicoBINAES },
+      { id: 8, title: "DigitaL: Criket", description: "¡Diseño y producción de pines Cricket!", type: 'image', src: digitalcri },
+      { id: 9, title: "Activación BTL", description: "¡Déjate sorprender por tu marca! Activación BTL Panda Express. Nos encanta ser parte de tus estrategias comerciales.", type: 'image', src: activacionPanda },
+      { id: 10, title: "Evento Teleperformance", description: "¡Diseño, producción, montaje y experiencias para celebración de comienzo del año 2024 con Teleperformance! Para fiesta de inicio de año llena de emoción y alegría.", type: 'image', src: eventoTp },
+      { id: 11, title: "Termoformado: Pilsener", description: "Porta afiches termoformados, con realces en detalles con impresión directa en lámina de estireno.", type: 'image', src: termoformadoPilsener },
+      { id: 12, title: "Serigrafía", description: "¡Kits de invitación lanzamiento Loto! Disfrutamos en producir kits #Loto. Nos encanta colaborar en tus estrategias comerciales.", type: 'image', src: serigraifaLoto },
+      { id: 13, title: "Corte Láser", description: "S ¡Reconocimiento empresarial! Nos fascina operar en las estrategias de tu marca con un gran impacto.", type: 'image', src: coprteLaser },
+      { id: 14, title: "Activación", description: "Se hizo Evento x", type: 'image', src: eventoNewYear },
+      { id: 16, title: "Evento de Año Nuevo, Teleperformance.", description: "Diseño y montaje de evento para fiesta corporativa, Teleperformance El Salvador.", type: 'image', src: eventoNewYear },
 
     ]
   );
